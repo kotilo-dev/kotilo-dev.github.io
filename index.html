@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kotilo – a home for your AI coding agents</title>
-  <meta name="description" content="Free, open-source Windows workspace for AI coding agents: real terminals with live agent status, one-click permission answers, and token usage, cost and plan limits, all running locally.">
+  <meta name="description" content="Free, open-source workspace for AI coding agents on Windows and Linux: real terminals with live agent status, one-click permission answers, and token usage, cost and plan limits, all running locally.">
   <link rel="icon" type="image/svg+xml" href="assets/img/kotilo.svg">
   <link rel="icon" type="image/png" href="favicon.png">
   <meta property="og:title" content="Kotilo – a home for your AI coding agents">
-  <meta property="og:description" content="Real terminals, live agent status, permission handling, usage, cost and limits. Free and open source for Windows.">
+  <meta property="og:description" content="Real terminals, live agent status, permission handling, usage, cost and limits. Free and open source for Windows and Linux.">
   <meta property="og:image" content="https://kotilo.dev/assets/img/permission.png">
   <meta property="og:url" content="https://kotilo.dev/">
   <meta name="twitter:card" content="summary_large_image">
@@ -37,10 +37,10 @@
     <h1>A home for your <em>AI coding agents</em></h1>
     <p class="lead">Run Claude Code, Codex, Copilot, Gemini and more side by side in real terminals. See at a glance which agent is working, which one needs you, and what it all costs.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#download">Download for Windows</a>
+      <a class="btn btn-primary" href="#download">Download</a>
       <a class="btn" href="https://github.com/kotilo-dev/kotilo">View on GitHub</a>
     </div>
-    <div class="meta">Windows 11 · x64 and ARM64 · no account, no telemetry</div>
+    <div class="meta">Windows 11 (x64, ARM64) · Linux (x64) · no account, no telemetry</div>
     <img class="shot" src="assets/img/permission.png" width="1440" height="900"
          alt="An agent asks for permission: the card shows the command and its risk; allow once, always allow or deny">
   </div>
@@ -152,11 +152,17 @@
   <section id="download" class="download">
     <div class="wrap">
       <div class="label">Download</div>
-      <h2>Get Kotilo for Windows</h2>
-      <p class="section-lead">Per-user installer, no administrator rights needed. Requires Windows 11 and the WebView2 Runtime (installed automatically if missing). Updates arrive automatically from GitHub Releases.</p>
+      <h2>Get Kotilo</h2>
+      <p class="section-lead"><b>Windows:</b> per-user installer, no administrator rights needed. Requires Windows 11 and the WebView2 Runtime (installed automatically if missing). Updates arrive automatically from GitHub Releases.</p>
       <div class="cta">
-        <a class="btn btn-primary" id="dl-x64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Download for x64</a>
-        <a class="btn" id="dl-arm64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Download for ARM64</a>
+        <a class="btn btn-primary" id="dl-x64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows x64</a>
+        <a class="btn" id="dl-arm64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows ARM64</a>
+      </div>
+      <p class="section-lead"><b>Linux (x64):</b> .deb for Debian and Ubuntu, .rpm for Fedora and openSUSE, or an AppImage for any distribution with WebKitGTK 4.1. Dictation, the mascot and global hotkeys are Windows-only for now.</p>
+      <div class="cta">
+        <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo/releases/latest">.deb</a>
+        <a class="btn" id="dl-rpm" href="https://github.com/kotilo-dev/kotilo/releases/latest">.rpm</a>
+        <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo/releases/latest">AppImage</a>
       </div>
       <div class="meta"><span id="dl-version">Latest release</span> · <a href="https://github.com/kotilo-dev/kotilo/releases">all releases and release notes</a></div>
       <div class="callout">
@@ -188,10 +194,10 @@
   fetch("https://api.github.com/repos/kotilo-dev/kotilo/releases/latest")
     .then(r => r.ok ? r.json() : Promise.reject(r.status))
     .then(rel => {
-      const find = arch => rel.assets.find(a => a.name.endsWith("_" + arch + "-setup.exe"));
-      for (const arch of ["x64", "arm64"]) {
-        const asset = find(arch);
-        if (asset) document.getElementById("dl-" + arch).href = asset.browser_download_url;
+      const links = { x64: "_x64-setup.exe", arm64: "_arm64-setup.exe", deb: "_amd64.deb", rpm: ".x86_64.rpm", appimage: "_amd64.AppImage" };
+      for (const [id, suffix] of Object.entries(links)) {
+        const asset = rel.assets.find(a => a.name.endsWith(suffix));
+        if (asset) document.getElementById("dl-" + id).href = asset.browser_download_url;
       }
       document.getElementById("dl-version").textContent = rel.tag_name;
     })
