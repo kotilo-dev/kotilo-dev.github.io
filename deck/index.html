@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kotilo Deck – a developer dashboard for your second display</title>
+  <meta name="description" content="A full-screen dashboard for a small display next to your monitor: clock, weather, calendar, system load, media, volume, pomodoro, to-dos and your AI agents. Free and open source for Windows and Linux.">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/deck/icon.svg">
+  <meta property="og:title" content="Kotilo Deck – a developer dashboard for your second display">
+  <meta property="og:description" content="Clock, weather, calendar, system load, media, pomodoro, to-dos and your AI agents on a small screen next to your monitor.">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/deck/deck-ops-catppuccin-mocha.png">
+  <meta property="og:url" content="https://kotilo.dev/deck/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kotilo.dev/deck/">
+  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="p-deck">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/kotilo.svg" alt="">Kotilo<span class="crumb">Deck</span></a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#privacy">Privacy</a>
+      <a class="nav-keep" href="https://github.com/kotilo-dev/kotilo-deck">GitHub</a>
+      <a class="nav-keep" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="hero-icon" src="/assets/img/deck/icon.svg" alt="">
+    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · MIT</span>
+    <h1>A dashboard for your <em>second display</em></h1>
+    <p class="lead">Kotilo Deck keeps what you glance at all day on a small screen next to your main monitor: clock, weather, calendar, system load, media, volume, a pomodoro timer, to-dos and your AI agents.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#download">Download</a>
+      <a class="btn" href="https://github.com/kotilo-dev/kotilo-deck">View on GitHub</a>
+    </div>
+    <div class="meta">Windows · Linux · any browser on your network</div>
+    <img class="shot" src="/assets/img/deck/deck-ops-catppuccin-mocha.png" width="1920" height="1080"
+         alt="The Ops workspace in Catppuccin Mocha: clock, system load, calendar, weather, media and agent status">
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="label">Features</div>
+      <h2>Arrange it once, glance at it all day</h2>
+      <div class="grid">
+        <div class="card"><h3>Ten widgets</h3><p>Clock, Date, Weather (no API key), Calendar (ICS feeds), System (CPU per core, RAM, GPU, top processes), Volume with a per-app mixer, Media, Pomodoro, Todo and Agent Status.</p></div>
+        <div class="card"><h3>Workspaces</h3><p>Saved dashboards with their own layout and theme. Switch with a swipe, the top bar, <kbd>Ctrl+Alt+←/→</kbd>, the tray, or rules for time of day, pomodoro start or a calendar event.</p></div>
+        <div class="card"><h3>Snap-to-grid layout</h3><p>8×4 in landscape, 4×8 in portrait, adjustable density. Each widget has a few fixed sizes with a layout made for each.</p></div>
+        <div class="card"><h3>31 themes</h3><p>Catppuccin, Tokyo Night, Nord, Dracula, Gruvbox, Rosé Pine, Solarized, GitHub, One Dark and more, plus your own. Light/dark switch, wallpapers, transparency and blur.</p></div>
+        <div class="card"><h3>Companion for Kotilo Desktop</h3><p>See running agents and approve or deny pending actions from the deck. <a href="/desktop/">Kotilo Desktop</a> connects on your machine only.</p></div>
+        <div class="card"><h3>Tablet mode</h3><p>Open the deck in any browser on your network, such as an old tablet or phone, by scanning a QR code. Token protected.</p></div>
+        <div class="card"><h3>Widget plugins</h3><p>Drop an HTML widget into <code>~/.kotilo/deck/widgets/</code>. See the <a href="https://github.com/kotilo-dev/kotilo-deck/blob/main/docs/plugin-api.md">plugin API</a>.</p></div>
+        <div class="card"><h3>Made for always-on screens</h3><p>Pixel shift, a night dim schedule and idle dim with a screensaver clock. Signed updates, installed only when you click.</p></div>
+        <div class="card"><h3>Touch and keyboard</h3><p>Touch first with 44 px targets, fully usable from the keyboard. English and Turkish interface.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="label">A closer look</div>
+      <h2>Workspaces and themes</h2>
+      <div class="gallery">
+        <figure>
+          <img src="/assets/img/deck/deck-agents-tokyo-night.png" width="1920" height="1080" loading="lazy" alt="The Agents workspace in Tokyo Night">
+          <figcaption><b>Agents</b> workspace in Tokyo Night</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/deck/deck-full-nord.png" width="1920" height="1080" loading="lazy" alt="The Full workspace in Nord">
+          <figcaption><b>Full</b> workspace in Nord</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/deck/deck-focus-catppuccin-latte.png" width="1920" height="1080" loading="lazy" alt="The Focus workspace in the light Catppuccin Latte theme">
+          <figcaption><b>Focus</b> workspace in Catppuccin Latte</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/deck/deck-edit.png" width="1920" height="1080" loading="lazy" alt="Edit mode: widgets on the grid with move and resize handles">
+          <figcaption><b>Edit mode</b>: move, resize, add and remove widgets</figcaption>
+        </figure>
+      </div>
+      <p class="note">Screenshots use made-up demo data.</p>
+    </div>
+  </section>
+
+  <section id="hardware">
+    <div class="wrap">
+      <div class="label">Hardware ideas</div>
+      <h2>Any small screen will do</h2>
+      <div class="gallery">
+        <ul class="checks" style="grid-template-columns: 1fr; align-content: start">
+          <li><b>A 7" to 15" USB-C portable display</b> next to or below your main monitor. 1024×600 and 1920×1080 are both first-class layouts; one cable carries video and touch.</li>
+          <li><b>An old tablet or phone</b> in tablet mode: turn it on in Settings and scan the QR code. No app to install.</li>
+          <li><b>A portrait mount</b>: on a vertical display the grid becomes 4×8 automatically, which suits a monitor arm or a stand beside a laptop.</li>
+          <li><b>Always on?</b> Turn on pixel shift and the night dim schedule.</li>
+        </ul>
+        <figure>
+          <img class="portrait" src="/assets/img/deck/deck-portrait.png" width="1080" height="1920" loading="lazy" alt="The Full workspace on a portrait display, laid out on a 4×8 grid" style="margin: 0 auto">
+          <figcaption style="text-align:center"><b>Portrait</b>: the grid becomes 4×8</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="label">Privacy</div>
+      <h2>No account, no cloud, no telemetry</h2>
+      <p class="section-lead">Kotilo Deck only goes online for the weather of the locations you add (Open-Meteo), the calendar feeds you add, and the daily update check on GitHub, which can be turned off. The companion server and tablet mode listen on your machine and local network only. Settings, workspaces and to-dos stay in <code>~/.kotilo/deck/</code>.</p>
+    </div>
+  </section>
+
+  <section id="download" class="download">
+    <div class="wrap">
+      <div class="label">Download</div>
+      <h2>Get Kotilo Deck</h2>
+      <p class="section-lead"><b>Windows:</b> per-user installer or MSI, or <code>winget install Kotilo.KotiloDeck</code>.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="dl-setup" href="https://github.com/kotilo-dev/kotilo-deck/releases/latest">Windows installer</a>
+        <a class="btn" id="dl-msi" href="https://github.com/kotilo-dev/kotilo-deck/releases/latest">Windows MSI</a>
+      </div>
+      <p class="section-lead"><b>Linux (x64):</b> AppImage for any distribution, .deb for Debian and Ubuntu, .rpm for Fedora and openSUSE.</p>
+      <div class="cta">
+        <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo-deck/releases/latest">AppImage</a>
+        <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo-deck/releases/latest">.deb</a>
+        <a class="btn" id="dl-rpm" href="https://github.com/kotilo-dev/kotilo-deck/releases/latest">.rpm</a>
+      </div>
+      <div class="meta"><span id="dl-version">Latest release</span> · <a href="https://github.com/kotilo-dev/kotilo-deck/releases">all releases and release notes</a> · <a href="https://github.com/kotilo-dev/kotilo-deck/blob/main/docs/install.md">install guide</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/kotilo-dev/kotilo-deck">Source</a>
+      <a href="https://github.com/kotilo-dev/kotilo-deck/releases">Releases</a>
+      <a href="https://github.com/kotilo-dev/kotilo-deck/issues">Issues</a>
+      <a href="https://github.com/kotilo-dev/kotilo-deck/blob/main/LICENSE">License (MIT)</a>
+      <a href="/">More tools from Kotilo</a>
+    </div>
+    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Geist (SIL Open Font License).</p>
+  </div>
+</footer>
+
+<script>
+  // Direct installer links for the latest release; the static links above are the fallback.
+  fetch("https://api.github.com/repos/kotilo-dev/kotilo-deck/releases/latest")
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(rel => {
+      const links = { setup: "_x64-setup.exe", msi: "_x64_en-US.msi", appimage: "_amd64.AppImage", deb: "_amd64.deb", rpm: ".x86_64.rpm" };
+      for (const [id, suffix] of Object.entries(links)) {
+        const asset = rel.assets.find(a => a.name.endsWith(suffix));
+        if (asset) document.getElementById("dl-" + id).href = asset.browser_download_url;
+      }
+      document.getElementById("dl-version").textContent = rel.tag_name;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

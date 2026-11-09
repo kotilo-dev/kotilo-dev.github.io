@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kotilo New Tab – a calm new tab page for Chrome and Firefox</title>
+  <meta name="description" content="A calm new tab page: your bookmarks in a sidebar, with clock, weather, calendar, to-dos, notes, news, Pomodoro and exchange rates. No account, no tracking, no ads.">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/newtab/icon.svg">
+  <meta property="og:title" content="Kotilo New Tab">
+  <meta property="og:description" content="A calm new tab page for Chrome and Firefox. No account, no tracking, no ads.">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/newtab/1-main.png">
+  <meta property="og:url" content="https://kotilo.dev/newtab/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kotilo.dev/newtab/">
+  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="p-newtab">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/kotilo.svg" alt="">Kotilo<span class="crumb">New Tab</span></a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a class="nav-keep" href="https://github.com/kotilo-dev/kotilo-newtab">GitHub</a>
+      <a class="nav-keep" href="#install">Install</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="hero-icon" src="/assets/img/newtab/icon.svg" alt="">
+    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · MIT</span>
+    <h1>Kotilo <em>New Tab</em></h1>
+    <p class="lead">A calm new tab page: your bookmarks in a sidebar, with clock, weather, calendar, to-dos, notes, news, Pomodoro and exchange rates. No account, no tracking, no ads.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#install">Install</a>
+      <a class="btn" href="https://github.com/kotilo-dev/kotilo-newtab">View on GitHub</a>
+    </div>
+    <div class="meta">Chrome and Chromium browsers · Firefox 142+</div>
+    <img class="shot" src="/assets/img/newtab/1-main.png" width="1280" height="800"
+         alt="The new tab page: bookmarks sidebar on the left; clock, search, daily focus and cards for to-dos, notes, markets, Pomodoro and weather">
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="label">Features</div>
+      <h2>Everything you glance at, on every new tab</h2>
+      <div class="grid">
+        <div class="card"><h3>Bookmarks sidebar</h3><p>Browse folders in place, search all bookmarks and open tabs, add, edit, delete and drag to reorder. Changes go straight to your browser's bookmarks.</p></div>
+        <div class="card"><h3>Recent and top sites</h3><p>Recently closed tabs and your most visited sites, one click away.</p></div>
+        <div class="card"><h3>News</h3><p>Add any RSS or Atom feed, or just a site address and its feed is found automatically. Filter by source.</p></div>
+        <div class="card"><h3>Clock and calendar</h3><p>World clocks; a monthly calendar with ISO week numbers and public holidays for your country.</p></div>
+        <div class="card"><h3>Weather</h3><p>Current conditions, hourly and 5-day forecast, in °C or °F.</p></div>
+        <div class="card"><h3>Focus, to-dos, notes, Pomodoro</h3><p>A daily focus line, a to-do list, quick notes and a Pomodoro timer with notifications.</p></div>
+        <div class="card"><h3>Markets</h3><p>Exchange rates in your own currency with a converter; gold, silver, platinum and palladium; major coins. Optional US stocks and ETFs with your own free Finnhub key.</p></div>
+        <div class="card"><h3>Quote of the day</h3><p>A daily quote, with an offline list as a fallback.</p></div>
+        <div class="card"><h3>Your wallpapers, your settings</h3><p>Photos or looping videos stored on your device. Settings sync through your browser account; accent colours; show or hide every part.</p></div>
+      </div>
+      <p class="note">On first run, the base currency, holiday country and units are guessed from your browser language; change them under Settings → Region and units.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="label">A closer look</div>
+      <h2>Screenshots</h2>
+      <div class="gallery">
+        <figure>
+          <img src="/assets/img/newtab/2-folder.png" width="1280" height="800" loading="lazy" alt="A bookmark folder opened in place in the sidebar">
+          <figcaption><b>Folders</b>: open a bookmark folder in place</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/newtab/3-metals.png" width="1280" height="800" loading="lazy" alt="Markets card showing gold, silver and platinum prices">
+          <figcaption><b>Markets</b>: exchange rates, metals and coins in your currency</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/newtab/4-cal.png" width="1280" height="800" loading="lazy" alt="Monthly calendar opened from the date, with ISO week numbers">
+          <figcaption><b>Calendar</b>: week numbers and public holidays</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/newtab/5-settings.png" width="1280" height="800" loading="lazy" alt="Settings panel: visible parts, accent colour, region and units, world clocks and markets">
+          <figcaption><b>Settings</b>: show or hide every part</figcaption>
+        </figure>
+      </div>
+      <p class="note">Screenshots use demo data.</p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="label">Privacy</div>
+      <h2>Stays in your browser</h2>
+      <ul class="checks">
+        <li><b>No account, no analytics, no ads.</b> The extension has no server of its own; the developer receives none of your data.</li>
+        <li><b>Your data stays local.</b> Settings, notes, to-dos and wallpapers live in your browser's extension storage.</li>
+        <li><b>Only the services it needs.</b> Weather, holidays, exchange rates and the daily quote come straight from public services.</li>
+        <li><b>Optional sources ask first.</b> Finnhub, regional funds and RSS feeds request permission for that site before the first request.</li>
+      </ul>
+      <p class="note">Full details, including every service and what it receives: <a href="/newtab/privacy/">privacy policy</a>.</p>
+    </div>
+  </section>
+
+  <section id="install" class="download">
+    <div class="wrap">
+      <div class="label">Install</div>
+      <h2>Get Kotilo New Tab</h2>
+      <p class="section-lead">Free, from your browser's add-on store.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://addons.mozilla.org/firefox/addon/kotilo-new-tab/">Add to Firefox</a>
+        <a class="btn" aria-disabled="true">Add to Chrome · coming soon</a>
+      </div>
+      <div class="meta">The Firefox listing goes live once Mozilla approves it; the Chrome Web Store listing is in review. Until then you can load it from <a href="https://github.com/kotilo-dev/kotilo-newtab">source</a>.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="/newtab/privacy/">Privacy</a>
+      <a href="https://github.com/kotilo-dev/kotilo-newtab">Source</a>
+      <a href="https://github.com/kotilo-dev/kotilo-newtab/issues">Issues</a>
+      <a href="https://github.com/kotilo-dev/kotilo-newtab/blob/main/LICENSE">Licence (MIT)</a>
+      <a href="/">More tools from Kotilo</a>
+    </div>
+    <p>Kotilo New Tab is published by Kotilo. Chrome is a trademark of Google LLC and Firefox is a trademark of the Mozilla Foundation; they are used only to describe compatibility.</p>
+    <p>This website sets no cookies and has no analytics. Fonts: Geist (SIL Open Font License).</p>
+  </div>
+</footer>
+</body>
+</html>

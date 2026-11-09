@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kotilo Kit – offline, keyboard-first developer toolbox</title>
+  <meta name="description" content="Base64, JSON, JWT, timestamps, regex, hashes and 25 more tools in one offline window. Clipboard to result in two keystrokes. Free and open source for Windows, macOS and Linux.">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/kit/icon.svg">
+  <meta property="og:title" content="Kotilo Kit – offline, keyboard-first developer toolbox">
+  <meta property="og:description" content="31 developer tools in one offline window. Clipboard to result in two keystrokes.">
+  <meta property="og:url" content="https://kotilo.dev/kit/">
+  <link rel="canonical" href="https://kotilo.dev/kit/">
+  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="p-kit">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/kotilo.svg" alt="">Kotilo<span class="crumb">Kit</span></a>
+    <nav class="nav">
+      <a href="#how">How it works</a>
+      <a href="#tools">Tools</a>
+      <a href="#cli">CLI</a>
+      <a class="nav-keep" href="https://github.com/kotilo-dev/kotilo-kit">GitHub</a>
+      <a class="nav-keep" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="hero-icon" src="/assets/img/kit/icon.svg" alt="">
+    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · MIT</span>
+    <h1>Kotilo <em>Kit</em></h1>
+    <p class="lead">An offline, keyboard-first developer toolbox. Base64, JSON, JWT, timestamps, regex, hashes and more in one window, with dev themes. No network calls, no telemetry, no clipboard history.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#download">Download</a>
+      <a class="btn" href="https://github.com/kotilo-dev/kotilo-kit">View on GitHub</a>
+    </div>
+    <div class="meta">Windows · macOS (universal) · Linux · command line</div>
+
+    <div class="palette" role="img" aria-label="Illustration of the Kit palette: a copied JWT is recognized, Enter decodes it and puts the payload on the clipboard">
+      <div class="search">Search tools… <kbd>Ctrl+Shift+K</kbd></div>
+      <div class="group">Suggested for your clipboard</div>
+      <div class="row sel"><span class="id">jwt</span>JWT decode<span class="hint">eyJhbGciOiJIUzI1NiIs…</span></div>
+      <div class="row"><span class="id">base64</span>Base64<span class="hint">decode</span></div>
+      <div class="out">{
+  "sub": "1234567890",
+  "name": "Ada Lovelace",
+  "iat": 1700000000
+}</div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="label">How it works</div>
+      <h2>Clipboard to result in two keystrokes</h2>
+      <p class="section-lead">Copy a JWT, press <kbd>Ctrl+Shift+K</kbd> (<kbd>Cmd+Shift+K</kbd> on macOS), hit <kbd>Enter</kbd>: the decoded payload is on your clipboard.</p>
+      <div class="grid">
+        <div class="card"><h3>Palette from anywhere</h3><p>A global shortcut opens the palette. Tools that recognize your clipboard appear under Suggested; <kbd>Enter</kbd> runs one and copies the result.</p></div>
+        <div class="card"><h3>Full window</h3><p>Every tool in a sidebar with live input and output. <kbd>Ctrl+K</kbd> searches; pasting recognized content into the search opens the matching tool.</p></div>
+        <div class="card"><h3>Keyboard all the way</h3><p><kbd>Tab</kbd> shows options, <kbd>Alt</kbd>+letter switches one, <kbd>Ctrl+1…9</kbd> runs a row, <kbd>Ctrl+Enter</kbd> opens the tool in the full window.</p></div>
+        <div class="card"><h3>Dev themes</h3><p>Catppuccin, Gruvbox, Tokyo Night, Everforest, Nord, Rosé Pine and Dracula, each with a light pair. Follows system light/dark; import .toml themes.</p></div>
+        <div class="card"><h3>Private by design</h3><p>No network calls and no telemetry. Clipboard detection asks for consent on first launch, and clipboard content is never stored.</p></div>
+        <div class="card"><h3>English and Turkish</h3><p>Interface and error messages in both. Turkish case conversion (İ/ı) and sorting follow tr-TR rules.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="wrap">
+      <div class="label">Tools</div>
+      <h2>31 built-in tools</h2>
+      <div class="table-wrap">
+        <table class="tools">
+          <tbody>
+            <tr><td>Encoding</td><td>Base64 · URL encode · JWT decode · HTML entities · Hex / text / binary · Unicode inspector</td></tr>
+            <tr><td>Format</td><td>JSON format · JSON ⇄ YAML ⇄ TOML ⇄ XML · CSV ⇄ JSON ⇄ Markdown · JSON to types · XML format · SQL format</td></tr>
+            <tr><td>Text</td><td>Case converter · Line tools · Text diff · Regex tester · Escape / unescape · Fake data · Text counter</td></tr>
+            <tr><td>Time · Number</td><td>Unix timestamp · Cron expression · Duration calculator · Number bases &amp; units</td></tr>
+            <tr><td>Generate · Crypto</td><td>UUID / ULID · Hash · Password generator</td></tr>
+            <tr><td>Web · Network</td><td>URL parser · Query string · HTTP status &amp; MIME</td></tr>
+            <tr><td>Color · Visual</td><td>Color converter · Theme palette</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Options, examples and detection rules: <a href="https://github.com/kotilo-dev/kotilo-kit/blob/main/docs/04-tool-catalog.md">tool catalog</a>. New tools are welcome, one per pull request.</p>
+    </div>
+  </section>
+
+  <section id="cli">
+    <div class="wrap">
+      <div class="label">Command line</div>
+      <h2>The same tools in your shell</h2>
+      <p class="section-lead">Every tool also runs from the terminal, reading standard input. Bare words select options, <code>--json</code> prints the result with metadata, and <code>detect</code> tells you which tool fits an input.</p>
+      <pre class="cmd">echo 1700000000 | kotilo kit timestamp --tz Europe/Istanbul
+echo '*/15 9-17 * * 1-5' | kotilo kit cron
+pbpaste | kotilo kit detect</pre>
+      <p class="note">The CLI is a single Node.js file attached to each release.</p>
+    </div>
+  </section>
+
+  <section id="download" class="download">
+    <div class="wrap">
+      <div class="label">Download</div>
+      <h2>Get Kotilo Kit</h2>
+      <p class="section-lead">Installers for every platform, all working offline.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="dl-setup" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows installer</a>
+        <a class="btn" id="dl-msi" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows MSI</a>
+        <a class="btn" id="dl-dmg" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">macOS (universal)</a>
+        <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">AppImage</a>
+        <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">.deb</a>
+      </div>
+      <div class="meta"><span id="dl-version">Latest release</span> · <a href="https://github.com/kotilo-dev/kotilo-kit/releases">all releases and release notes</a></div>
+      <div class="callout">
+        <b>Not code-signed yet.</b> On Windows, SmartScreen shows "unknown publisher": choose <b>More info → Run anyway</b> if you trust the download. On macOS, open the app the first time with right-click → <b>Open</b>.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/kotilo-dev/kotilo-kit">Source</a>
+      <a href="https://github.com/kotilo-dev/kotilo-kit/releases">Releases</a>
+      <a href="https://github.com/kotilo-dev/kotilo-kit/issues">Issues</a>
+      <a href="https://github.com/kotilo-dev/kotilo-kit/blob/main/LICENSE">License (MIT)</a>
+      <a href="/">More tools from Kotilo</a>
+    </div>
+    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Geist (SIL Open Font License).</p>
+  </div>
+</footer>
+
+<script>
+  // Direct installer links for the latest release; the static links above are the fallback.
+  fetch("https://api.github.com/repos/kotilo-dev/kotilo-kit/releases/latest")
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(rel => {
+      const links = { setup: "_x64-setup.exe", msi: "_x64_en-US.msi", dmg: "_universal.dmg", appimage: "_amd64.AppImage", deb: "_amd64.deb" };
+      for (const [id, suffix] of Object.entries(links)) {
+        const asset = rel.assets.find(a => a.name.endsWith(suffix));
+        if (asset) document.getElementById("dl-" + id).href = asset.browser_download_url;
+      }
+      document.getElementById("dl-version").textContent = rel.tag_name;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

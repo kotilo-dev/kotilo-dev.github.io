@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Kotilo New Tab</title>
+  <meta name="description" content="Privacy policy of the Kotilo New Tab browser extension: no account, no analytics, no advertising; which public services the page contacts and what each receives.">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/newtab/icon.svg">
+  <link rel="canonical" href="https://kotilo.dev/newtab/privacy/">
+  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="p-newtab">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/kotilo.svg" alt="">Kotilo<span class="crumb">New Tab</span></a>
+    <nav class="nav">
+      <a class="nav-keep" href="/newtab/">Kotilo New Tab</a>
+      <a class="nav-keep" href="https://github.com/kotilo-dev/kotilo-newtab">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Rendered copy of PRIVACY.md in kotilo-dev/kotilo-newtab; that file is the source of truth. -->
+  <article class="prose">
+    <h1>Kotilo New Tab — Privacy Policy</h1>
+    <p class="updated"><em>Last updated: 9 November 2026</em></p>
+
+    <p>This extension replaces your browser's new tab page. It has no account, no analytics, no advertising and no server of its own. The developer does not receive, collect, store or sell any of your data.</p>
+
+    <h2>Data stored on your device</h2>
+    <p>Everything you enter stays in your browser's own extension storage:</p>
+    <ul>
+      <li>Bookmarks are read from, and edited in, your browser's bookmarks; the extension keeps no copy of them.</li>
+      <li>Settings, world clocks, to-dos, daily focus, market watchlists and news feed addresses are kept in browser sync storage. If you are signed in to your browser with sync turned on, your browser (Google for Chrome, Mozilla for Firefox) syncs this data between your own devices.</li>
+      <li>Notes, cached weather, cached prices and news, and click counts for frequently used bookmarks are kept in local storage on this device only.</li>
+      <li>Wallpapers (photos and videos) you add are kept in the browser's local database (IndexedDB) on this device only.</li>
+    </ul>
+    <p>Removing the extension deletes this data from the device.</p>
+
+    <h2>Network requests</h2>
+    <p>To show its content, the extension's page contacts the following services directly from your browser. Each one receives only what is listed, plus the technical data every web request carries (such as your IP address).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Service</th><th>When</th><th>What it receives</th></tr></thead>
+        <tbody>
+          <tr><td>Open-Meteo (api.open-meteo.com, geocoding-api.open-meteo.com)</td><td>Weather card</td><td>Your approximate coordinates (only if you allow location access) or the city you type</td></tr>
+          <tr><td>BigDataCloud (api.bigdatacloud.net)</td><td>Weather card, automatic location</td><td>Your approximate coordinates, to show the city name</td></tr>
+          <tr><td>Nager.Date (date.nager.at)</td><td>Calendar</td><td>The country you selected for public holidays and the year</td></tr>
+          <tr><td>BrainyQuote (brainyquote.com)</td><td>Quote of the day</td><td>Nothing beyond the request for the public daily quote feed</td></tr>
+          <tr><td>currency-api (cdn.jsdelivr.net, currency-api.pages.dev)</td><td>Markets card</td><td>Your selected base currency</td></tr>
+          <tr><td>DuckDuckGo (icons.duckduckgo.com)</td><td>Firefox only, bookmark icons</td><td>The domain names of your bookmarks (Chrome uses its own local icon cache instead)</td></tr>
+          <tr><td>Finnhub (finnhub.io)</td><td>Only if you add your own Finnhub API key</td><td>Your API key and the stock symbols you watch</td></tr>
+          <tr><td>TEFAS (tefas.gov.tr)</td><td>Only if you turn on the regional "Turkey — TEFAS funds" source</td><td>The fund codes you watch</td></tr>
+          <tr><td>RSS feeds you add</td><td>Only for feeds you add</td><td>A normal request for that feed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Optional sources (Finnhub, TEFAS, RSS feeds) ask for your permission to contact that site before the first request.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Bookmarks:</strong> to show and manage your bookmarks bar.</li>
+      <li><strong>Tabs, sessions, top sites:</strong> to search your open tabs and to show recently closed tabs and most visited sites. This data is shown on the page only and never leaves your device.</li>
+      <li><strong>Storage, unlimited storage:</strong> to save your settings, notes and wallpapers.</li>
+      <li><strong>Geolocation:</strong> to show local weather, only if you allow it.</li>
+      <li><strong>Alarms, notifications:</strong> for the Pomodoro timer.</li>
+      <li><strong>Favicon (Chrome):</strong> to show bookmark icons from the browser's local cache.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Kotilo New Tab is published by Kotilo (<a href="https://kotilo.dev">https://kotilo.dev</a>). Questions about this policy: <a href="https://github.com/kotilo-dev/kotilo-newtab/issues">https://github.com/kotilo-dev/kotilo-newtab/issues</a></p>
+
+    <p class="note">Source: <a href="https://github.com/kotilo-dev/kotilo-newtab/blob/main/PRIVACY.md">PRIVACY.md on GitHub</a></p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="/newtab/">Kotilo New Tab</a>
+      <a href="https://github.com/kotilo-dev/kotilo-newtab">Source</a>
+      <a href="https://github.com/kotilo-dev/kotilo-newtab/issues">Issues</a>
+      <a href="/">Kotilo</a>
+    </div>
+    <p>This website sets no cookies and has no analytics.</p>
+  </div>
+</footer>
+</body>
+</html>
