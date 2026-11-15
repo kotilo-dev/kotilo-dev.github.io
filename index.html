@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta property="og:title" content="Kotilo – open-source desktop tools that stay on your machine">
   <meta property="og:description" content="A desktop workspace for AI coding agents, an offline developer toolbox, a second-screen dashboard and a new tab page. Free, open source, no telemetry.">
-  <meta property="og:image" content="https://kotilo.dev/assets/img/mission-control.png">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/og-desktop.jpg">
   <meta property="og:url" content="https://kotilo.dev/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#14110f">
@@ -36,33 +36,101 @@
 </header>
 
 <main>
-  <div class="hero wrap">
+  <div class="hero hero-home wrap">
     <div class="hero-text">
-      <div class="hero-mark">
-        <img src="/assets/img/kotilo.svg" alt="The Kotilo snail-shell mark">
-        <span>Kotilo is Finnish for a snail shell. <i>Koti</i> means home.</span>
-      </div>
-      <h1>A desk for your AI coding agents, and a few small tools around it.</h1>
+      <h1>A desk for your AI coding agents. <span class="soft">And a few small tools around it.</span></h1>
       <p class="lead">Free, open-source tools that run on your own machine: a workspace for AI coding agents, an offline developer toolbox, a dashboard for your second screen and a new tab page.</p>
+      <p class="aside">Kotilo is Finnish for a snail shell. Koti means home.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="/desktop/">Kotilo Desktop</a>
+        <a class="btn btn-primary" data-dl href="/desktop/#download">Download Kotilo Desktop</a>
         <a class="btn" href="https://github.com/kotilo-dev">Source on GitHub</a>
       </div>
+      <div class="meta">Windows · Linux · macOS preview · free · Apache-2.0</div>
     </div>
-    <div class="shot">
-      <img src="/assets/img/mission-control.png" width="1440" height="900"
-           alt="Kotilo Desktop's mission control: every agent session with its state, latest output, plan limits and cost">
+
+    <div class="mc" id="mc" role="group" aria-label="Demo of Kotilo Desktop's mission control: an agent asks for permission and you answer it" data-perm="closed" data-snail="work">
+      <div class="mc-bar"><b>Mission control</b><span id="mc-sum">3 agents · 3 working</span></div>
+      <div class="mc-cards">
+        <div class="mc-card" data-agent="gateway" data-state="work">
+          <div class="mc-head"><span class="avatar">X</span><div class="mc-name"><b>gateway</b><small>Codex CLI</small></div></div>
+          <div class="mc-st"><span class="chip">Working</span><span class="mc-t mono">1m 12s</span></div>
+          <pre class="mc-out"></pre>
+          <div class="mc-foot"><span>88k tok</span><span>plan 62%</span></div>
+        </div>
+        <div class="mc-card" data-agent="orders" data-state="work">
+          <div class="mc-head"><span class="avatar">C</span><div class="mc-name"><b>orders-service</b><small>Claude Code</small></div></div>
+          <div class="mc-st"><span class="chip">Working</span><span class="mc-t mono">2m 03s</span></div>
+          <pre class="mc-out"></pre>
+          <div class="mc-foot"><span>context 41%</span><span>$1.24</span></div>
+        </div>
+        <div class="mc-card" data-agent="docs" data-state="work">
+          <div class="mc-head"><span class="avatar">C</span><div class="mc-name"><b>docs-site</b><small>Claude Code</small></div></div>
+          <div class="mc-st"><span class="chip">Working</span><span class="mc-t mono">5m 40s</span></div>
+          <pre class="mc-out"></pre>
+          <div class="mc-foot"><span>context 12%</span><span>$0.31</span></div>
+        </div>
+      </div>
+      <div class="mc-perm" id="mc-perm" role="region" aria-label="Permission request">
+        <div class="t">Codex CLI wants to run a command</div>
+        <div class="s">gateway · waiting <span id="mc-wait">0s</span></div>
+        <div class="cmd">$ dotnet ef database update --project Gateway</div>
+        <p class="risk">Writes to a database</p>
+        <div class="btns">
+          <button type="button" class="primary" data-answer="Allowed once">Allow once</button>
+          <button type="button" data-answer="Always allowed">Always allow</button>
+          <button type="button" class="deny" data-answer="Denied">Deny</button>
+        </div>
+      </div>
+      <div class="mc-task">
+        <span class="msg" id="mc-msg">3 agents working</span>
+        <svg class="snail" viewBox="22 4 172 137.6" aria-hidden="true">
+          <circle class="halo" cx="88" cy="80" r="54"/>
+          <path class="ln" d="M158 70 L150 42 M170 70 L182 44"/>
+          <circle class="led" cx="150" cy="39" r="7"/>
+          <circle class="led" cx="182" cy="41" r="7"/>
+          <path class="m2" d="M40 140 a12 12 0 0 1 0 -24 H150 V80 a14 14 0 0 1 28 0 V126 a14 14 0 0 1 -14 14 Z"/>
+          <rect class="visor" x="156" y="84" width="16" height="6" rx="3"/>
+          <circle class="m1" cx="88" cy="80" r="48"/>
+          <path class="sp" d="M88 74 a8 8 0 0 1 8 8 a16 16 0 0 1 -16 16 a24 24 0 0 1 -24 -24 a32 32 0 0 1 32 -32 a40 40 0 0 1 40 40"/>
+          <circle class="led" cx="88" cy="82" r="7"/>
+        </svg>
+      </div>
     </div>
   </div>
 
+  <div class="wrap proof">
+    <div><b>9</b><span>agent integrations</span></div>
+    <div><b>28</b><span>themes, app and terminals</span></div>
+    <div><b data-version>v0.9.0</b><span>latest desktop release</span></div>
+    <div><b>4</b><span>tools, all open source</span></div>
+  </div>
+
+  <section>
+    <div class="wrap strip">
+      <div>
+        <h2>See who needs you. <span class="soft">Stop checking every window.</span></h2>
+        <p>Every agent reports its state through the hooks it already has. The sidebar and the taskbar show who needs you, so you stop checking windows.</p>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <ul id="ticker">
+          <li data-state="perm"><span class="avatar">X</span><span class="n">gateway<small>Codex CLI</small></span><span class="e">1m 15s</span><span class="chip">Needs you</span></li>
+          <li data-state="work"><span class="avatar">C</span><span class="n">orders-service<small>Claude Code</small></span><span class="e">2m 03s</span><span class="chip">Working</span></li>
+          <li data-state="done"><span class="avatar">C</span><span class="n">docs-site<small>Claude Code</small></span><span class="e">6m 03s</span><span class="chip">Done</span></li>
+          <li data-state="work"><span class="avatar">G</span><span class="n">billing-api<small>Gemini CLI</small></span><span class="e">48s</span><span class="chip">Working</span></li>
+          <li data-state="idle"><span class="avatar">P</span><span class="n">mobile-app<small>Copilot CLI</small></span><span class="e">12m</span><span class="chip">Idle</span></li>
+          <li data-state="work"><span class="avatar">O</span><span class="n">infra<small>OpenCode</small></span><span class="e">3m 20s</span><span class="chip">Working</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="products">
     <div class="wrap">
-      <h2>Products</h2>
-      <p class="section-lead">They share the dev themes you already use, and each one works on its own.</p>
-      <div class="products">
+      <h2>Four tools. <span class="soft">One for your agents, three for the rest of the day.</span></h2>
+      <div class="products" style="margin-top: 32px">
         <a class="product wide" href="/desktop/">
           <div class="visual">
-            <div class="shot"><img src="/assets/img/permission.png" width="1440" height="900" loading="lazy" alt="Kotilo Desktop: an agent asks for permission"></div>
+            <div class="shot"><img src="/assets/img/permission-card.webp" width="498" height="480" loading="lazy" alt="Kotilo Desktop: Claude Code asks to run npm test, with Allow once, Don't ask again and Deny buttons over the terminal"></div>
           </div>
           <div class="body">
             <div class="name"><img src="/assets/img/kotilo.svg" alt="">Kotilo Desktop</div>
@@ -72,11 +140,7 @@
         </a>
         <a class="product" href="/kit/">
           <div class="visual">
-<pre class="keys" aria-label="Kit example: copy a JWT, press Ctrl+Shift+K, press Enter, the decoded payload is on the clipboard"><span class="d"># copied:</span> eyJhbGciOiJIUzI1NiIsInR5cCI6…
-<span class="k">Ctrl+Shift+K</span>  →  suggests JWT decode
-<span class="k">Enter</span>         →  {"sub": "1234567890", …} copied
-<span class="d"># the same tools in a shell:</span>
-<span class="k">echo 1700000000 | kotilo kit timestamp</span></pre>
+            <pre class="keys typer" id="typer" aria-label="Kit example: copy a JWT, press Ctrl+Shift+K, the decoded payload is on the clipboard. In a shell: echo 1700000000 | kotilo kit timestamp prints 2023-11-14 22:13:20 UTC"></pre>
           </div>
           <div class="body">
             <div class="name"><img src="/assets/img/kit/icon.svg" alt="">Kotilo Kit</div>
@@ -86,9 +150,18 @@
         </a>
         <a class="product" href="/newtab/">
           <div class="visual">
-            <div class="browser">
+            <div class="browser nt">
               <div class="bar"><span class="lights"><i></i><i></i><i></i></span><span class="tab">New Tab</span></div>
-              <img src="/assets/img/newtab/1-main.png" width="1280" height="800" loading="lazy" alt="Kotilo New Tab: bookmarks sidebar, clock and cards">
+              <img src="/assets/img/newtab/1-main.webp" width="1280" height="800" loading="lazy" alt="">
+              <div class="nt-live" aria-hidden="true">
+                <div class="nt-side">
+                  <small>Bookmarks</small>
+                  <span><i></i>Pull requests</span>
+                  <span><i></i>Release notes</span>
+                  <span><i></i>Staging dashboard</span>
+                </div>
+                <div class="nt-clock"><b id="nt-time">10:42</b><span id="nt-date">Thursday, 5 November</span></div>
+              </div>
             </div>
           </div>
           <div class="body">
@@ -99,7 +172,7 @@
         </a>
         <a class="product wide" href="/deck/">
           <div class="visual">
-            <div class="monitor"><img src="/assets/img/deck/deck-ops-glass.png" width="1920" height="1080" loading="lazy" alt="Kotilo Deck: the Ops workspace with the glass look on a second display"></div>
+            <div class="monitor"><img src="/assets/img/deck/deck-ops.webp" width="1440" height="810" loading="lazy" alt="Kotilo Deck in Gruvbox Dark: system load, today's calendar, music, clock, date, weather and volume on a second display"></div>
           </div>
           <div class="body">
             <div class="name"><img src="/assets/img/deck/icon.svg" alt="">Kotilo Deck</div>
@@ -113,8 +186,57 @@
 
   <section>
     <div class="wrap">
-      <h2>On your machine</h2>
-      <p class="prose-block">Everything runs on your machine. No account, no server, no analytics, in the apps or on this site. When a tool does go online (weather, update check), its privacy page says exactly where. Source on GitHub, Apache-2.0 or MIT.</p>
+      <h2>Works with the agents you already use. <span class="soft">And plain shells.</span></h2>
+      <a class="agent-row" href="https://github.com/kotilo-dev/kotilo#supported-agents" style="margin-top: 28px">
+        <figure><span class="avatar">C</span><figcaption>Claude Code</figcaption></figure>
+        <figure><span class="avatar">X</span><figcaption>Codex CLI</figcaption></figure>
+        <figure><span class="avatar">P</span><figcaption>Copilot CLI</figcaption></figure>
+        <figure><span class="avatar">G</span><figcaption>Gemini CLI</figcaption></figure>
+        <figure><span class="avatar">Q</span><figcaption>Qwen Code</figcaption></figure>
+        <figure><span class="avatar">D</span><figcaption>Factory Droid</figcaption></figure>
+        <figure><span class="avatar">O</span><figcaption>OpenCode</figcaption></figure>
+        <figure><span class="avatar">U</span><figcaption>Cursor CLI</figcaption></figure>
+        <figure><span class="avatar">&gt;_</span><figcaption>Plain shells</figcaption></figure>
+      </a>
+      <p class="note">What each integration covers, and its known gaps: <a href="https://github.com/kotilo-dev/kotilo#supported-agents">support table</a>.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions. <span class="soft">Short answers.</span></h2>
+      <div class="faq" style="margin-top: 28px">
+        <details>
+          <summary>Which agents work with Kotilo Desktop?</summary>
+          <p>Claude Code, Codex CLI, GitHub Copilot CLI, Gemini CLI, Qwen Code, Factory Droid, OpenCode and Cursor CLI, plus any shell: PowerShell, cmd, Git Bash, WSL, bash and zsh. You can add your own agent with an <code>adapter.json</code> file. The <a href="https://github.com/kotilo-dev/kotilo#supported-agents">support table</a> lists what works for each.</p>
+        </details>
+        <details>
+          <summary>Does Kotilo change my agent's config?</summary>
+          <p>Only when you install an agent's integration in Settings. Kotilo backs the file up first, adds only its own hook entries, leaves files it cannot parse alone, and removes its entries again when you uninstall the integration. It never reads your agents' login or token files.</p>
+        </details>
+        <details>
+          <summary>What happens when I close the window?</summary>
+          <p>Kotilo quits, unless you turn on "Keep running in the tray" under Settings → About &amp; diagnostics. Quitting closes the terminals Kotilo opened, along with the agents running in them, and stops its background service. Agents you started in other terminals keep running. Your workspaces and tabs come back the next time you open Kotilo.</p>
+        </details>
+        <details>
+          <summary>Does anything leave my machine?</summary>
+          <p>No account, no server, no analytics, in the apps or on this site. Prompts and responses are never written to Kotilo's database or logs. The few connections: the update check (can be turned off), a speech model download when you choose one, AI providers you set up yourself, and, in Deck and New Tab, the weather and other services you turn on. Each product's privacy page lists them: <a href="https://github.com/kotilo-dev/kotilo/blob/main/docs/legal/privacy.md">Desktop</a>, <a href="/deck/#privacy">Deck</a>, <a href="/newtab/privacy/">New Tab</a>.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes. Kotilo Desktop is open source under Apache-2.0; Kit, Deck and New Tab under MIT. No paid tier, no account.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <h2>Give your agents a desk. <span class="soft">Free, on your own machine.</span></h2>
+      <div class="cta">
+        <a class="btn btn-primary" data-dl href="/desktop/#download">Download Kotilo Desktop</a>
+      </div>
+      <a href="/desktop/#download">All downloads and release notes →</a>
     </div>
   </section>
 </main>
@@ -128,9 +250,15 @@
       <a href="/newtab/">Kotilo New Tab</a>
       <a href="https://github.com/kotilo-dev">GitHub</a>
     </div>
+    <div class="links">
+      <a href="https://github.com/kotilo-dev/kotilo/blob/main/docs/legal/privacy.md">Privacy: Desktop</a>
+      <a href="/deck/#privacy">Privacy: Deck</a>
+      <a href="/newtab/privacy/">Privacy: New Tab</a>
+    </div>
     <p>Kotilo is an independent open-source project. Third-party product names on this site are trademarks of their respective owners and are used only to describe compatibility.</p>
-    <p>This website sets no cookies and has no analytics. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
+    <p>This website sets no cookies and has no analytics; the download button asks the GitHub API for the latest release. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
   </div>
 </footer>
+<script src="/assets/home.js" defer></script>
 </body>
 </html>

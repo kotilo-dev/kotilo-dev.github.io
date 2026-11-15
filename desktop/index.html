@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta property="og:title" content="Kotilo Desktop – a workspace for AI coding agents">
   <meta property="og:description" content="Real terminals, live agent status, permission handling, worktrees, usage, cost and limits. Free and open source for Windows, Linux and macOS.">
-  <meta property="og:image" content="https://kotilo.dev/assets/img/permission.png">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/og-desktop.jpg">
   <meta property="og:url" content="https://kotilo.dev/desktop/">
   <link rel="canonical" href="https://kotilo.dev/desktop/">
   <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
   <div class="hero wrap">
     <div class="hero-text">
       <img class="hero-icon" src="/assets/img/kotilo.svg" alt="">
-      <h1>Run your AI coding agents side by side, and see which one needs you.</h1>
+      <h1>Run your AI coding agents side by side. <span class="soft">See which one needs you.</span></h1>
       <p class="lead">Claude Code, Codex, Copilot, Gemini and more in real terminals. Kotilo shows which agent is working and which one is waiting, lets you answer permission requests in one click, and keeps track of what it all costs.</p>
       <div class="cta">
         <a class="btn btn-primary" href="#download">Download</a>
@@ -46,14 +46,14 @@
       <div class="meta">Windows 11 (x64, ARM64) · Linux (x64) · macOS preview · Apache-2.0</div>
     </div>
     <div class="shot">
-      <img src="/assets/img/permission.png" width="1440" height="900"
-           alt="An agent asks for permission: the card shows the command and its risk; allow once, always allow or deny">
+      <img src="/assets/img/mission-control.webp" width="1384" height="630"
+           alt="Mission control in Gruvbox Dark: gateway needs permission, orders-service is working, docs-site is done, with plan limits above">
     </div>
   </div>
 
   <section id="features">
     <div class="wrap">
-      <h2>All your agents in one window</h2>
+      <h2>All your agents in one window. <span class="soft">Each in a real terminal.</span></h2>
       <p class="section-lead">Agents run unmodified in real terminals, signed in with your own account. Kotilo listens to the hooks and plugins they already provide, so it knows what each session is doing, including sessions you started outside Kotilo.</p>
       <div class="states">
         <span class="state"><span class="dot" style="background: var(--working)"></span>Working</span>
@@ -121,27 +121,22 @@
 
   <section>
     <div class="wrap">
-      <h2>A closer look</h2>
-      <div class="gallery">
+      <h2>A closer look. <span class="soft">Demo data, real screens.</span></h2>
+      <div class="gallery cols-3">
         <figure>
-          <img src="/assets/img/mission-control.png" width="1440" height="900" loading="lazy"
-               alt="Mission control: every agent session with its state, latest output, plan limits and cost">
-          <figcaption><b>Mission control</b>: every session at a glance</figcaption>
+          <img src="/assets/img/terminal-permission.webp" width="498" height="750" loading="lazy"
+               alt="Claude Code asks to run npm test; the permission card offers Allow once, Don't ask again and Deny over the terminal">
+          <figcaption><b>Permission answers</b>: one click, read from the agent's own dialog</figcaption>
         </figure>
         <figure>
-          <img src="/assets/img/timeline-diff.png" width="1440" height="900" loading="lazy"
+          <img src="/assets/img/timeline-diff.webp" width="644" height="800" loading="lazy"
                alt="Timeline: the agent's plan and tool calls next to a diff of the files it changed">
           <figcaption><b>Timeline and diff</b>: what the agent did and changed</figcaption>
         </figure>
         <figure>
-          <img src="/assets/img/usage.png" width="1440" height="900" loading="lazy"
+          <img src="/assets/img/usage.webp" width="1384" height="700" loading="lazy"
                alt="Usage: daily tokens, 5-hour blocks and a breakdown by project, model or agent">
           <figcaption><b>Usage and cost</b>: by day, block, project, model and agent</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/img/themed-terminal.png" width="1440" height="900" loading="lazy"
-               alt="The workspace in the Catppuccin Mocha theme: the whole app and the terminal share the theme's colours">
-          <figcaption><b>Themes</b>: the whole app and its terminals, here Catppuccin Mocha</figcaption>
         </figure>
       </div>
       <p class="note">Screenshots use invented demo data.</p>
@@ -150,7 +145,7 @@
 
   <section id="agents">
     <div class="wrap">
-      <h2>Works with the agents you already use</h2>
+      <h2>Works with the agents you already use. <span class="soft">And plain shells.</span></h2>
       <p class="section-lead">Kotilo installs an agent's hooks only when you click <b>Install</b>, backs up the agent's config first and removes only its own entries on uninstall. Any other CLI can join through an <code>adapter.json</code> file and the Agent Integration Protocol.</p>
       <div class="agents">
         <div class="agent"><span class="avatar">C</span><div>Claude Code<small>Hooks · usage</small></div></div>
@@ -170,7 +165,7 @@
 
   <section id="privacy">
     <div class="wrap">
-      <h2>Privacy</h2>
+      <h2>Privacy. <span class="soft">Nothing to sign up for.</span></h2>
       <p class="section-lead">Kotilo does not wrap or replace your agents and has no server of its own.</p>
       <dl class="facts-list">
         <div><dt>No telemetry</dt><dd>No analytics, crash reports or tracking of any kind.</dd></div>
@@ -186,7 +181,7 @@
 
   <section id="download" class="download">
     <div class="wrap">
-      <h2>Download</h2>
+      <h2>Download. <span class="soft">Free, no account.</span></h2>
       <div class="dl-group">
         <p><b>Windows:</b> per-user installer, no administrator rights needed. Requires Windows 11 and the WebView2 Runtime (installed automatically if missing). Updates arrive automatically from GitHub Releases.</p>
         <div class="cta">

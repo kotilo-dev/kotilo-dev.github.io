@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <!-- Site copy of the Kotilo Kit mark in the site palette. -->
-  <rect x="64" y="64" width="896" height="896" rx="200" fill="#1c1815" stroke="#3a322b" stroke-width="16"/>
-  <path d="M352 300v424M352 532l256-232M440 452l200 272" fill="none" stroke="#c8793a" stroke-width="88" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 128 128">
+  <!-- Site icon for Kotilo Kit in the site palette: a prompt on a key cap. -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#1c1815" stroke="#3a322b" stroke-width="2"/>
+  <rect x="20" y="22" width="88" height="80" rx="14" fill="none" stroke="#3a322b" stroke-width="4"/>
+  <path d="M38 48l16 14-16 14" fill="none" stroke="#c8793a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62 78h28" fill="none" stroke="#ece6df" stroke-width="9" stroke-linecap="round"/>
 </svg>
