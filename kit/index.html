@@ -8,12 +8,15 @@
   <link rel="icon" type="image/svg+xml" href="/assets/img/kit/icon.svg">
   <meta property="og:title" content="Kotilo Kit – offline, keyboard-first developer toolbox">
   <meta property="og:description" content="31 developer tools in one offline window. Clipboard to result in two keystrokes.">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/kit/full-window.png">
   <meta property="og:url" content="https://kotilo.dev/kit/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kotilo.dev/kit/">
-  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#14110f">
+  <link rel="preload" href="/assets/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body class="p-kit">
+<body>
 
 <header class="site-header">
   <div class="wrap">
@@ -30,48 +33,76 @@
 
 <main>
   <div class="hero wrap">
-    <img class="hero-icon" src="/assets/img/kit/icon.svg" alt="">
-    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · MIT</span>
-    <h1>Kotilo <em>Kit</em></h1>
-    <p class="lead">An offline, keyboard-first developer toolbox. Base64, JSON, JWT, timestamps, regex, hashes and more in one window, with dev themes. No network calls, no telemetry, no clipboard history.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#download">Download</a>
-      <a class="btn" href="https://github.com/kotilo-dev/kotilo-kit">View on GitHub</a>
+    <div class="hero-text">
+      <img class="hero-icon" src="/assets/img/kit/icon.svg" alt="">
+      <h1>Copy a JWT, press two keys, and the payload is on your clipboard.</h1>
+      <p class="lead">Kotilo Kit is an offline, keyboard-first developer toolbox: Base64, JSON, JWT, timestamps, regex, hashes and 25 more tools in one window. No network calls, no telemetry, no clipboard history.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#download">Download</a>
+        <a class="btn" href="https://github.com/kotilo-dev/kotilo-kit">Source on GitHub</a>
+      </div>
+      <div class="meta">Windows · macOS (universal) · Linux · command line · MIT</div>
     </div>
-    <div class="meta">Windows · macOS (universal) · Linux · command line</div>
-
-    <div class="palette" role="img" aria-label="Illustration of the Kit palette: a copied JWT is recognized, Enter decodes it and puts the payload on the clipboard">
-      <div class="search">Search tools… <kbd>Ctrl+Shift+K</kbd></div>
-      <div class="group">Suggested for your clipboard</div>
-      <div class="row sel"><span class="id">jwt</span>JWT decode<span class="hint">eyJhbGciOiJIUzI1NiIs…</span></div>
-      <div class="row"><span class="id">base64</span>Base64<span class="hint">decode</span></div>
-      <div class="out">{
-  "sub": "1234567890",
-  "name": "Ada Lovelace",
-  "iat": 1700000000
-}</div>
+    <div class="shot bare">
+      <img src="/assets/img/kit/palette.png" width="1440" height="960"
+           alt="The Kit palette: a JWT on the clipboard is recognized and JWT decode is suggested, with recently used tools below">
     </div>
   </div>
 
   <section id="how">
     <div class="wrap">
-      <div class="label">How it works</div>
       <h2>Clipboard to result in two keystrokes</h2>
       <p class="section-lead">Copy a JWT, press <kbd>Ctrl+Shift+K</kbd> (<kbd>Cmd+Shift+K</kbd> on macOS), hit <kbd>Enter</kbd>: the decoded payload is on your clipboard.</p>
-      <div class="grid">
-        <div class="card"><h3>Palette from anywhere</h3><p>A global shortcut opens the palette. Tools that recognize your clipboard appear under Suggested; <kbd>Enter</kbd> runs one and copies the result.</p></div>
-        <div class="card"><h3>Full window</h3><p>Every tool in a sidebar with live input and output. <kbd>Ctrl+K</kbd> searches; pasting recognized content into the search opens the matching tool.</p></div>
-        <div class="card"><h3>Keyboard all the way</h3><p><kbd>Tab</kbd> shows options, <kbd>Alt</kbd>+letter switches one, <kbd>Ctrl+1…9</kbd> runs a row, <kbd>Ctrl+Enter</kbd> opens the tool in the full window.</p></div>
-        <div class="card"><h3>Dev themes</h3><p>Catppuccin, Gruvbox, Tokyo Night, Everforest, Nord, Rosé Pine and Dracula, each with a light pair. Follows system light/dark; import .toml themes.</p></div>
-        <div class="card"><h3>Private by design</h3><p>No network calls and no telemetry. Clipboard detection asks for consent on first launch, and clipboard content is never stored.</p></div>
-        <div class="card"><h3>English and Turkish</h3><p>Interface and error messages in both. Turkish case conversion (İ/ı) and sorting follow tr-TR rules.</p></div>
+      <div class="features">
+        <div class="group">
+          <h3 class="group-title">Palette</h3>
+          <dl>
+            <dt>From anywhere</dt>
+            <dd>A global shortcut opens the palette. Tools that recognize your clipboard come first; <kbd>Enter</kbd> runs one and copies the result.</dd>
+            <dt>Keyboard all the way</dt>
+            <dd><kbd>Tab</kbd> shows options, <kbd>Alt</kbd>+letter switches one, <kbd>Ctrl+1…9</kbd> runs a row, <kbd>Ctrl+Enter</kbd> opens the tool in the full window.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3 class="group-title">Full window</h3>
+          <dl>
+            <dt>Every tool in a sidebar</dt>
+            <dd>Live input and output. <kbd>Ctrl+K</kbd> searches; pasting recognized content into the search opens the matching tool.</dd>
+            <dt>Dev themes</dt>
+            <dd>Catppuccin, Gruvbox, Tokyo Night, Everforest, Nord, Rosé Pine and Dracula, each with a light pair. Follows system light/dark; import .toml themes.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3 class="group-title">Private and bilingual</h3>
+          <dl>
+            <dt>Nothing leaves your machine</dt>
+            <dd>No network calls and no telemetry. Clipboard detection asks for consent on first launch, and clipboard content is never stored.</dd>
+            <dt>English and Turkish</dt>
+            <dd>Interface and error messages in both. Turkish case conversion (İ/ı) and sorting follow tr-TR rules.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>A closer look</h2>
+      <div class="gallery">
+        <figure>
+          <img src="/assets/img/kit/full-window.png" width="2560" height="1600" loading="lazy" alt="Full window: JWT decode with header, payload and time claims">
+          <figcaption><b>JWT decode</b>: header, payload and whether the token is still valid</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/kit/full-window-tokyo-night.png" width="2560" height="1600" loading="lazy" alt="Full window in Tokyo Night: JSON format with the suggestion strip">
+          <figcaption><b>JSON format</b> in Tokyo Night, with suggestions for the input</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section id="tools">
     <div class="wrap">
-      <div class="label">Tools</div>
       <h2>31 built-in tools</h2>
       <div class="table-wrap">
         <table class="tools">
@@ -92,7 +123,6 @@
 
   <section id="cli">
     <div class="wrap">
-      <div class="label">Command line</div>
       <h2>The same tools in your shell</h2>
       <p class="section-lead">Every tool also runs from the terminal, reading standard input. Bare words select options, <code>--json</code> prints the result with metadata, and <code>detect</code> tells you which tool fits an input.</p>
       <pre class="cmd">echo 1700000000 | kotilo kit timestamp --tz Europe/Istanbul
@@ -104,15 +134,16 @@ pbpaste | kotilo kit detect</pre>
 
   <section id="download" class="download">
     <div class="wrap">
-      <div class="label">Download</div>
-      <h2>Get Kotilo Kit</h2>
-      <p class="section-lead">Installers for every platform, all working offline.</p>
-      <div class="cta">
-        <a class="btn btn-primary" id="dl-setup" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows installer</a>
-        <a class="btn" id="dl-msi" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows MSI</a>
-        <a class="btn" id="dl-dmg" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">macOS (universal)</a>
-        <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">AppImage</a>
-        <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">.deb</a>
+      <h2>Download</h2>
+      <div class="dl-group">
+        <p>Installers for every platform, all working offline.</p>
+        <div class="cta">
+          <a class="btn btn-primary" id="dl-setup" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows installer</a>
+          <a class="btn" id="dl-msi" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">Windows MSI</a>
+          <a class="btn" id="dl-dmg" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">macOS (universal)</a>
+          <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">AppImage</a>
+          <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo-kit/releases/latest">.deb</a>
+        </div>
       </div>
       <div class="meta"><span id="dl-version">Latest release</span> · <a href="https://github.com/kotilo-dev/kotilo-kit/releases">all releases and release notes</a></div>
       <div class="callout">
@@ -131,7 +162,7 @@ pbpaste | kotilo kit detect</pre>
       <a href="https://github.com/kotilo-dev/kotilo-kit/blob/main/LICENSE">License (MIT)</a>
       <a href="/">More tools from Kotilo</a>
     </div>
-    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Geist (SIL Open Font License).</p>
+    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
   </div>
 </footer>
 

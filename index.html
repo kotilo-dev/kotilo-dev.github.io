@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kotilo – free, local-first tools for developers</title>
-  <meta name="description" content="Kotilo makes free, open-source developer tools that run on your machine: a desktop workspace for AI coding agents, an offline developer toolbox, a second-screen dashboard and a calm new tab page. No account, no telemetry.">
+  <title>Kotilo – open-source desktop tools that stay on your machine</title>
+  <meta name="description" content="Kotilo makes free, open-source developer tools that run on your machine: a desktop workspace for AI coding agents, an offline developer toolbox, a second-screen dashboard and a new tab page. No account, no telemetry.">
   <link rel="icon" type="image/svg+xml" href="/assets/img/kotilo.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta property="og:title" content="Kotilo – free, local-first tools for developers">
-  <meta property="og:description" content="A desktop workspace for AI coding agents, an offline developer toolbox, a second-screen dashboard and a calm new tab page. Free, open source, no telemetry.">
-  <meta property="og:image" content="https://kotilo.dev/assets/img/permission.png">
+  <meta property="og:title" content="Kotilo – open-source desktop tools that stay on your machine">
+  <meta property="og:description" content="A desktop workspace for AI coding agents, an offline developer toolbox, a second-screen dashboard and a new tab page. Free, open source, no telemetry.">
+  <meta property="og:image" content="https://kotilo.dev/assets/img/mission-control.png">
   <meta property="og:url" content="https://kotilo.dev/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#14110f">
+  <link rel="preload" href="/assets/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
   <script>
     // The desktop app's page used to live here; keep its old section links working.
@@ -25,10 +26,10 @@
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/img/kotilo.svg" alt="">Kotilo</a>
     <nav class="nav">
-      <a href="/desktop/">Desktop</a>
-      <a href="/kit/">Kit</a>
-      <a href="/deck/">Deck</a>
-      <a href="/newtab/">New Tab</a>
+      <a href="/desktop/">Kotilo Desktop</a>
+      <a href="/kit/">Kotilo Kit</a>
+      <a href="/deck/">Kotilo Deck</a>
+      <a href="/newtab/">Kotilo New Tab</a>
       <a class="nav-keep" href="https://github.com/kotilo-dev">GitHub</a>
     </nav>
   </div>
@@ -36,51 +37,74 @@
 
 <main>
   <div class="hero wrap">
-    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · no account · no telemetry</span>
-    <h1>Calm tools for <em>developers</em></h1>
-    <p class="lead">Kotilo makes small, focused tools that run on your own machine: a home for your AI coding agents, an offline toolbox, a dashboard for your second screen and a quiet new tab page.</p>
+    <div class="hero-text">
+      <div class="hero-mark">
+        <img src="/assets/img/kotilo.svg" alt="The Kotilo snail-shell mark">
+        <span>Kotilo is Finnish for a snail shell. <i>Koti</i> means home.</span>
+      </div>
+      <h1>A desk for your AI coding agents, and a few small tools around it.</h1>
+      <p class="lead">Free, open-source tools that run on your own machine: a workspace for AI coding agents, an offline developer toolbox, a dashboard for your second screen and a new tab page.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/desktop/">Kotilo Desktop</a>
+        <a class="btn" href="https://github.com/kotilo-dev">Source on GitHub</a>
+      </div>
+    </div>
+    <div class="shot">
+      <img src="/assets/img/mission-control.png" width="1440" height="900"
+           alt="Kotilo Desktop's mission control: every agent session with its state, latest output, plan limits and cost">
+    </div>
   </div>
 
   <section id="products">
     <div class="wrap">
-      <div class="label">Products</div>
-      <h2>Pick what you need</h2>
-      <p class="section-lead">Every tool stands on its own. They share a look, the dev themes you already use, and the same rules: your data stays with you.</p>
+      <h2>Products</h2>
+      <p class="section-lead">They share the dev themes you already use, and each one works on its own.</p>
       <div class="products">
-        <a class="product" href="/desktop/">
-          <div class="thumb"><img src="/assets/img/permission.png" width="1440" height="900" loading="lazy" alt="Kotilo Desktop: an agent asks for permission"></div>
+        <a class="product wide" href="/desktop/">
+          <div class="visual">
+            <div class="shot"><img src="/assets/img/permission.png" width="1440" height="900" loading="lazy" alt="Kotilo Desktop: an agent asks for permission"></div>
+          </div>
           <div class="body">
-            <div class="title"><img src="/assets/img/kotilo.svg" alt="">Kotilo Desktop</div>
-            <p>A home for your AI coding agents: real terminals with live agent status, one-click permission answers, usage, cost and plan limits.</p>
-            <div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">macOS preview</span><span class="tag">Apache-2.0</span></div>
-            <span class="more">Learn more →</span>
+            <div class="name"><img src="/assets/img/kotilo.svg" alt="">Kotilo Desktop</div>
+            <p>Claude Code, Codex, Copilot, Gemini and more side by side in real terminals, with live agent status, one-click permission answers, worktrees for parallel agents, and usage, cost and plan limits.</p>
+            <div class="facts">Windows · Linux · macOS preview · Apache-2.0</div>
           </div>
         </a>
         <a class="product" href="/kit/">
-          <div class="thumb kit-thumb"><img src="/assets/img/kit/icon.svg" alt=""></div>
-          <div class="body">
-            <div class="title"><img src="/assets/img/kit/icon.svg" alt="">Kotilo Kit</div>
-            <p>Offline, keyboard-first developer toolbox: Base64, JSON, JWT, timestamps, regex, hashes and more. Clipboard to result in two keystrokes.</p>
-            <div class="tags"><span class="tag">Windows</span><span class="tag">macOS</span><span class="tag">Linux</span><span class="tag">CLI</span><span class="tag">MIT</span></div>
-            <span class="more">Learn more →</span>
+          <div class="visual">
+<pre class="keys" aria-label="Kit example: copy a JWT, press Ctrl+Shift+K, press Enter, the decoded payload is on the clipboard"><span class="d"># copied:</span> eyJhbGciOiJIUzI1NiIsInR5cCI6…
+<span class="k">Ctrl+Shift+K</span>  →  suggests JWT decode
+<span class="k">Enter</span>         →  {"sub": "1234567890", …} copied
+<span class="d"># the same tools in a shell:</span>
+<span class="k">echo 1700000000 | kotilo kit timestamp</span></pre>
           </div>
-        </a>
-        <a class="product" href="/deck/">
-          <div class="thumb"><img src="/assets/img/deck/deck-ops-catppuccin-mocha.png" width="1920" height="1080" loading="lazy" alt="Kotilo Deck: the Ops workspace in Catppuccin Mocha"></div>
           <div class="body">
-            <div class="title"><img src="/assets/img/deck/icon.svg" alt="">Kotilo Deck</div>
-            <p>A full-screen dashboard for your second display: clock, weather, calendar, system load, media, pomodoro, to-dos and your AI agents.</p>
-            <div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">Tablet browser</span><span class="tag">MIT</span></div>
-            <span class="more">Learn more →</span>
+            <div class="name"><img src="/assets/img/kit/icon.svg" alt="">Kotilo Kit</div>
+            <p>An offline, keyboard-first toolbox: Base64, JSON, JWT, timestamps, regex, hashes and 25 more tools. Clipboard to result in two keystrokes, also from the command line.</p>
+            <div class="facts">Windows · macOS · Linux · CLI · MIT</div>
           </div>
         </a>
         <a class="product" href="/newtab/">
-          <div class="thumb"><img src="/assets/img/newtab/1-main.png" width="1280" height="800" loading="lazy" alt="Kotilo New Tab: bookmarks sidebar, clock and cards"></div>
+          <div class="visual">
+            <div class="browser">
+              <div class="bar"><span class="lights"><i></i><i></i><i></i></span><span class="tab">New Tab</span></div>
+              <img src="/assets/img/newtab/1-main.png" width="1280" height="800" loading="lazy" alt="Kotilo New Tab: bookmarks sidebar, clock and cards">
+            </div>
+          </div>
           <div class="body">
-            <div class="title"><img src="/assets/img/newtab/icon.svg" alt="">Kotilo New Tab</div>
-            <p>A calm new tab page: your bookmarks in a sidebar, with clock, weather, calendar, to-dos, notes, news, Pomodoro and exchange rates.</p>
-            <div class="tags"><span class="tag">Chrome</span><span class="tag">Firefox</span><span class="tag">MIT</span></div>
-            <span class="more">Learn more →</span>
+            <div class="name"><img src="/assets/img/newtab/icon.svg" alt="">Kotilo New Tab</div>
+            <p>Your bookmarks in a sidebar on every new tab, with clock, weather, calendar, to-dos, notes, news, Pomodoro and exchange rates.</p>
+            <div class="facts">Chrome Web Store · Firefox Add-ons · MIT</div>
+          </div>
+        </a>
+        <a class="product wide" href="/deck/">
+          <div class="visual">
+            <div class="monitor"><img src="/assets/img/deck/deck-ops-glass.png" width="1920" height="1080" loading="lazy" alt="Kotilo Deck: the Ops workspace with the glass look on a second display"></div>
+          </div>
+          <div class="body">
+            <div class="name"><img src="/assets/img/deck/icon.svg" alt="">Kotilo Deck</div>
+            <p>A full-screen dashboard for the small display next to your monitor: clock, weather, calendar, system load, media, pomodoro, to-dos and your AI agents, with approve and deny for Kotilo Desktop.</p>
+            <div class="facts">Windows · Linux · any browser on your network · MIT</div>
           </div>
         </a>
       </div>
@@ -89,16 +113,8 @@
 
   <section>
     <div class="wrap">
-      <div class="label">How we build</div>
-      <h2>The same rules for every tool</h2>
-      <ul class="checks">
-        <li><b>Local first.</b> Your settings and data live on your device. No Kotilo account, no Kotilo server.</li>
-        <li><b>No telemetry.</b> No analytics, crash reporting or tracking in any product, or on this site.</li>
-        <li><b>Open source.</b> Every product's source is on GitHub under Apache-2.0 or MIT.</li>
-        <li><b>Few, stated connections.</b> When a tool goes online (weather, updates, feeds you add), its privacy notes list exactly where.</li>
-        <li><b>Your themes.</b> Catppuccin, Tokyo Night, Nord, Dracula, Gruvbox, Rosé Pine and more in the desktop apps.</li>
-        <li><b>No ads.</b> Nothing on the screen is there to sell you something.</li>
-      </ul>
+      <h2>On your machine</h2>
+      <p class="prose-block">Everything runs on your machine. No account, no server, no analytics, in the apps or on this site. When a tool does go online (weather, update check), its privacy page says exactly where. Source on GitHub, Apache-2.0 or MIT.</p>
     </div>
   </section>
 </main>
@@ -112,9 +128,8 @@
       <a href="/newtab/">Kotilo New Tab</a>
       <a href="https://github.com/kotilo-dev">GitHub</a>
     </div>
-    <p>Kotilo is Finnish for a snail shell ("koti" means home).</p>
     <p>Kotilo is an independent open-source project. Third-party product names on this site are trademarks of their respective owners and are used only to describe compatibility.</p>
-    <p>This website sets no cookies and has no analytics. Fonts: Geist (SIL Open Font License).</p>
+    <p>This website sets no cookies and has no analytics. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
   </div>
 </footer>
 </body>

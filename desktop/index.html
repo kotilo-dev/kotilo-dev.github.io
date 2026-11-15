@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kotilo Desktop – a home for your AI coding agents</title>
-  <meta name="description" content="Free, open-source workspace for AI coding agents on Windows, Linux and macOS: real terminals with live agent status, one-click permission answers, and token usage, cost and plan limits, all running locally.">
+  <title>Kotilo Desktop – a workspace for AI coding agents</title>
+  <meta name="description" content="Free, open-source workspace for AI coding agents on Windows, Linux and macOS: real terminals with live agent status, one-click permission answers, worktrees for parallel agents, and token usage, cost and plan limits, all running locally.">
   <link rel="icon" type="image/svg+xml" href="/assets/img/kotilo.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta property="og:title" content="Kotilo Desktop – a home for your AI coding agents">
-  <meta property="og:description" content="Real terminals, live agent status, permission handling, usage, cost and limits. Free and open source for Windows, Linux and macOS.">
+  <meta property="og:title" content="Kotilo Desktop – a workspace for AI coding agents">
+  <meta property="og:description" content="Real terminals, live agent status, permission handling, worktrees, usage, cost and limits. Free and open source for Windows, Linux and macOS.">
   <meta property="og:image" content="https://kotilo.dev/assets/img/permission.png">
   <meta property="og:url" content="https://kotilo.dev/desktop/">
   <link rel="canonical" href="https://kotilo.dev/desktop/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#14110f">
+  <link rel="preload" href="/assets/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body class="p-desktop">
+<body>
 
 <header class="site-header">
   <div class="wrap">
@@ -34,23 +35,26 @@
 
 <main>
   <div class="hero wrap">
-    <span class="eyebrow"><span class="dot" style="background: var(--idle)"></span>Free and open source · Apache-2.0</span>
-    <h1>A home for your <em>AI coding agents</em></h1>
-    <p class="lead">Run Claude Code, Codex, Copilot, Gemini and more side by side in real terminals. See at a glance which agent is working, which one needs you, and what it all costs.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#download">Download</a>
-      <a class="btn" href="https://github.com/kotilo-dev/kotilo">View on GitHub</a>
+    <div class="hero-text">
+      <img class="hero-icon" src="/assets/img/kotilo.svg" alt="">
+      <h1>Run your AI coding agents side by side, and see which one needs you.</h1>
+      <p class="lead">Claude Code, Codex, Copilot, Gemini and more in real terminals. Kotilo shows which agent is working and which one is waiting, lets you answer permission requests in one click, and keeps track of what it all costs.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#download">Download</a>
+        <a class="btn" href="https://github.com/kotilo-dev/kotilo">Source on GitHub</a>
+      </div>
+      <div class="meta">Windows 11 (x64, ARM64) · Linux (x64) · macOS preview · Apache-2.0</div>
     </div>
-    <div class="meta">Windows 11 (x64, ARM64) · Linux (x64) · macOS preview · no account, no telemetry</div>
-    <img class="shot" src="/assets/img/permission.png" width="1440" height="900"
-         alt="An agent asks for permission: the card shows the command and its risk; allow once, always allow or deny">
+    <div class="shot">
+      <img src="/assets/img/permission.png" width="1440" height="900"
+           alt="An agent asks for permission: the card shows the command and its risk; allow once, always allow or deny">
+    </div>
   </div>
 
   <section id="features">
     <div class="wrap">
-      <div class="label">What it does</div>
-      <h2>Every agent, every state, one window</h2>
-      <p class="section-lead">Agents run unmodified in real terminals, signed in with your own account. Kotilo listens to the hooks and plugins they already provide, so it always knows what each session is doing, including sessions you started outside Kotilo.</p>
+      <h2>All your agents in one window</h2>
+      <p class="section-lead">Agents run unmodified in real terminals, signed in with your own account. Kotilo listens to the hooks and plugins they already provide, so it knows what each session is doing, including sessions you started outside Kotilo.</p>
       <div class="states">
         <span class="state"><span class="dot" style="background: var(--working)"></span>Working</span>
         <span class="state"><span class="dot" style="background: var(--blocked)"></span>Waiting for permission</span>
@@ -58,27 +62,66 @@
         <span class="state"><span class="dot" style="background: var(--done)"></span>Done</span>
         <span class="state"><span class="dot" style="background: var(--idle)"></span>Idle</span>
       </div>
-      <div class="grid">
-        <div class="card"><h3>Real terminals</h3><p>Tabs and split panes with ConPTY shells, agent CLIs and your own commands. Clickable <code>file:line</code> links, file tree and diffs.</p></div>
-        <div class="card"><h3>Permission card</h3><p>See the tool, the command or file and a risk label. Allow once, always allow or deny with one click, or answer in the terminal.</p></div>
-        <div class="card"><h3>Mission control</h3><p>Every running agent on one screen, with a timeline of what each session did and the files it changed.</p></div>
-        <div class="card"><h3>Usage, cost and limits</h3><p>Tokens and estimated cost by day, 5-hour block, project, model and agent. Plan limits where the agent reports them. CSV and Excel export.</p></div>
-        <div class="card"><h3>Review notes</h3><p>Comment on lines of a diff and hand every note, with file, lines and code, to an agent as one prompt.</p></div>
-        <div class="card"><h3>Sessions and resume</h3><p>Every agent session of the last 90 days with model, project, tokens and cost. Resume one in its folder with the agent's own resume command.</p></div>
-        <div class="card"><h3>Quick commands</h3><p>Save the shell commands and prompts you use every day, per workspace or for all, and run them with one click.</p></div>
-        <div class="card"><h3>Composer and tasks</h3><p>Write longer prompts with file mentions and saved prompts. A personal task list, daily summaries and wait-time reports.</p></div>
-        <div class="card"><h3>Local dictation</h3><p>Push-to-talk speech-to-text with Whisper, running entirely on your machine.</p></div>
-        <div class="card"><h3>Nothing slips by</h3><p>Finished work you have not looked at stays marked, with a count on the taskbar icon and one "while you were away" summary when you come back.</p></div>
-        <div class="card"><h3>Themes</h3><p>Catppuccin, Tokyo Night, Rosé Pine, Dracula, Nord, Gruvbox, Solarized, GitHub, Kanagawa, Everforest and more, for the whole app and its terminals. Import your Windows Terminal schemes.</p></div>
-        <div class="card"><h3>A snail on the taskbar</h3><p>An optional robot snail mascot shows how your agents are doing and takes you to the one that needs you.</p></div>
+      <div class="features cols-2">
+        <div class="group">
+          <h3 class="group-title">Agents and terminals</h3>
+          <dl>
+            <dt>Real terminals</dt>
+            <dd>Tabs and split panes with ConPTY shells, agent CLIs and your own commands. Clickable <code>file:line</code> links, file tree and diffs.</dd>
+            <dt>Permission card</dt>
+            <dd>The tool, the command or file and a risk label. Allow once, always allow or deny with one click, or answer in the terminal.</dd>
+            <dt>Mission control</dt>
+            <dd>Every running agent on one screen, with a timeline of what each session did and the files it changed.</dd>
+            <dt>Agent context <span class="new">new</span></dt>
+            <dd>The instruction files, rules, skills and MCP servers an agent picks up in a workspace, with a rough token count. MCP secrets are never shown.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3 class="group-title">Parallel work and review</h3>
+          <dl>
+            <dt>Worktrees <span class="new">new</span></dt>
+            <dd>Give each agent its own git worktree and branch, compare what it changed, then merge or remove it. Works with every supported agent.</dd>
+            <dt>Review notes</dt>
+            <dd>Comment on lines of a diff and hand every note, with file, lines and code, to an agent as one prompt.</dd>
+            <dt>Docs check <span class="new">new</span></dt>
+            <dd>Finds paths your docs and <code>AGENTS.md</code> name that no longer exist, and docs whose code changed since. Also as <code>kotilo-docs check</code> for CI.</dd>
+            <dt>Sessions and resume</dt>
+            <dd>Every agent session of the last 90 days with model, project, tokens and cost. Resume one in its folder with the agent's own resume command.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3 class="group-title">Usage and cost</h3>
+          <dl>
+            <dt>Usage, cost and limits</dt>
+            <dd>Tokens and estimated cost by day, week, 5-hour block, project, model and agent. Plan limits where the agent reports them. CSV and Excel export.</dd>
+            <dt>In the tray <span class="new">new</span></dt>
+            <dd>Today's tokens and cost, the active 5-hour block, your plan limits and the agents waiting for you, one click from the tray icon.</dd>
+            <dt>Unseen work stays marked</dt>
+            <dd>Finished work you have not looked at keeps a count on the taskbar icon, and you get one "while you were away" summary when you come back.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3 class="group-title">Around the terminal</h3>
+          <dl>
+            <dt>Composer and tasks</dt>
+            <dd>Longer prompts with file mentions and saved prompts. A personal task list, daily summaries and wait-time reports.</dd>
+            <dt>Quick commands</dt>
+            <dd>The shell commands and prompts you use every day, per workspace or for all, one click away.</dd>
+            <dt>Local dictation</dt>
+            <dd>Push-to-talk speech-to-text with Whisper, running entirely on your machine.</dd>
+            <dt>Themes and a snail</dt>
+            <dd>28 themes for the whole app and its terminals, Windows Terminal schemes import, and an optional robot snail on the taskbar that takes you to the agent that needs you.</dd>
+            <dt>Kotilo Deck</dt>
+            <dd>Your agents and their permission requests on a second screen with <a href="/deck/">Kotilo Deck</a>; approve or deny from there.</dd>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="label">A closer look</div>
-      <h2>See what your agents are doing</h2>
+      <h2>A closer look</h2>
       <div class="gallery">
         <figure>
           <img src="/assets/img/mission-control.png" width="1440" height="900" loading="lazy"
@@ -96,19 +139,9 @@
           <figcaption><b>Usage and cost</b>: by day, block, project, model and agent</figcaption>
         </figure>
         <figure>
-          <img src="/assets/img/permission.png" width="1440" height="900" loading="lazy"
-               alt="Permission card with the command, a risk label and allow or deny buttons">
-          <figcaption><b>Permission handling</b>: answer without hunting for the window</figcaption>
-        </figure>
-        <figure>
           <img src="/assets/img/themed-terminal.png" width="1440" height="900" loading="lazy"
                alt="The workspace in the Catppuccin Mocha theme: the whole app and the terminal share the theme's colours">
           <figcaption><b>Themes</b>: the whole app and its terminals, here Catppuccin Mocha</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/img/themes.png" width="1440" height="900" loading="lazy"
-               alt="Settings, Appearance: dark and light theme pickers grouped by family">
-          <figcaption><b>28 themes</b>: one for dark and one for light mode</figcaption>
         </figure>
       </div>
       <p class="note">Screenshots use invented demo data.</p>
@@ -117,20 +150,19 @@
 
   <section id="agents">
     <div class="wrap">
-      <div class="label">Supported agents</div>
       <h2>Works with the agents you already use</h2>
       <p class="section-lead">Kotilo installs an agent's hooks only when you click <b>Install</b>, backs up the agent's config first and removes only its own entries on uninstall. Any other CLI can join through an <code>adapter.json</code> file and the Agent Integration Protocol.</p>
       <div class="agents">
-        <div class="agent"><span class="avatar" style="background:#2a2230;color:#f0a37d">C</span><div>Claude Code<small>Hooks · usage</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#1d2a26;color:#7fd8b4">X</span><div>Codex CLI<small>Hooks · usage · plan limits</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#1f2430;color:#a5c8ff">P</span><div>GitHub Copilot CLI<small>Hooks · tokens</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#1e2433;color:#8ab4f8">G</span><div>Gemini CLI<small>Hooks · usage</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#262236;color:#b39cf5">Q</span><div>Qwen Code<small>Hooks · usage</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#2b2620;color:#f2b56b">D</span><div>Factory Droid<small>Hooks · usage</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#26231e;color:#f0d9a8">O</span><div>OpenCode<small>Plugin · usage</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#21252b;color:#d3dae3">U</span><div>Cursor CLI<small>Hooks · screen rules</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#1b1e24;color:#c9ccd4">&gt;_</span><div>Plain shells<small>PowerShell, cmd, Git Bash, WSL, bash, zsh</small></div></div>
-        <div class="agent"><span class="avatar" style="background:#1b1e24;color:#7c9cff">+</span><div>Your own agent<small>adapter.json · protocol</small></div></div>
+        <div class="agent"><span class="avatar">C</span><div>Claude Code<small>Hooks · usage</small></div></div>
+        <div class="agent"><span class="avatar">X</span><div>Codex CLI<small>Hooks · usage · plan limits</small></div></div>
+        <div class="agent"><span class="avatar">P</span><div>GitHub Copilot CLI<small>Hooks · tokens</small></div></div>
+        <div class="agent"><span class="avatar">G</span><div>Gemini CLI<small>Hooks · usage</small></div></div>
+        <div class="agent"><span class="avatar">Q</span><div>Qwen Code<small>Hooks · usage</small></div></div>
+        <div class="agent"><span class="avatar">D</span><div>Factory Droid<small>Hooks · usage</small></div></div>
+        <div class="agent"><span class="avatar">O</span><div>OpenCode<small>Plugin · usage</small></div></div>
+        <div class="agent"><span class="avatar">U</span><div>Cursor CLI<small>Hooks · screen rules</small></div></div>
+        <div class="agent"><span class="avatar">&gt;_</span><div>Plain shells<small>PowerShell, cmd, Git Bash, WSL, bash, zsh</small></div></div>
+        <div class="agent"><span class="avatar" style="color: var(--accent)">+</span><div>Your own agent<small>adapter.json · protocol</small></div></div>
       </div>
       <p class="note">Details and known gaps per agent: <a href="https://github.com/kotilo-dev/kotilo#supported-agents">support table</a>.</p>
     </div>
@@ -138,40 +170,44 @@
 
   <section id="privacy">
     <div class="wrap">
-      <div class="label">Privacy</div>
-      <h2>Your agents, your data, your machine</h2>
+      <h2>Privacy</h2>
       <p class="section-lead">Kotilo does not wrap or replace your agents and has no server of its own.</p>
-      <ul class="checks">
-        <li><b>No telemetry.</b> No analytics, crash reports or tracking of any kind.</li>
-        <li><b>No transcript content at rest.</b> Prompts and responses are never written to Kotilo's database or logs; only counts and metadata.</li>
-        <li><b>Never touches agent credentials.</b> Kotilo does not read, copy, store or send any agent's login or token files.</li>
-        <li><b>Your config files stay yours.</b> Hooks are installed only when you ask, backup-first, and only Kotilo's own entries are changed.</li>
-        <li><b>Local data.</b> Settings, usage, tasks and reports live in local folders; AI provider keys in Windows Credential Manager.</li>
-        <li><b>Few, optional connections.</b> Update check (can be turned off), Whisper model download when you pick one, and AI providers you configure.</li>
-      </ul>
+      <dl class="facts-list">
+        <div><dt>No telemetry</dt><dd>No analytics, crash reports or tracking of any kind.</dd></div>
+        <div><dt>No transcript content at rest</dt><dd>Prompts and responses are never written to Kotilo's database or logs; only counts and metadata.</dd></div>
+        <div><dt>Agent credentials stay untouched</dt><dd>Kotilo does not read, copy, store or send any agent's login or token files.</dd></div>
+        <div><dt>Your config files stay yours</dt><dd>Hooks are installed only when you ask, backup-first, and only Kotilo's own entries are changed.</dd></div>
+        <div><dt>Local data</dt><dd>Settings, usage, tasks and reports live in local folders; AI provider keys in Windows Credential Manager.</dd></div>
+        <div><dt>Few, optional connections</dt><dd>Update check (can be turned off), Whisper model download when you pick one, and AI providers you configure.</dd></div>
+      </dl>
       <p class="note">Full details: <a href="https://github.com/kotilo-dev/kotilo/blob/main/docs/legal/privacy.md">privacy policy</a>.</p>
     </div>
   </section>
 
   <section id="download" class="download">
     <div class="wrap">
-      <div class="label">Download</div>
-      <h2>Get Kotilo</h2>
-      <p class="section-lead"><b>Windows:</b> per-user installer, no administrator rights needed. Requires Windows 11 and the WebView2 Runtime (installed automatically if missing). Updates arrive automatically from GitHub Releases.</p>
-      <div class="cta">
-        <a class="btn btn-primary" id="dl-x64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows x64</a>
-        <a class="btn" id="dl-arm64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows ARM64</a>
+      <h2>Download</h2>
+      <div class="dl-group">
+        <p><b>Windows:</b> per-user installer, no administrator rights needed. Requires Windows 11 and the WebView2 Runtime (installed automatically if missing). Updates arrive automatically from GitHub Releases.</p>
+        <div class="cta">
+          <a class="btn btn-primary" id="dl-x64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows x64</a>
+          <a class="btn" id="dl-arm64" href="https://github.com/kotilo-dev/kotilo/releases/latest">Windows ARM64</a>
+        </div>
       </div>
-      <p class="section-lead"><b>Linux (x64):</b> .deb for Debian and Ubuntu, .rpm for Fedora and openSUSE, or an AppImage for any distribution with WebKitGTK 4.1. Dictation, the mascot and global hotkeys are not on Linux yet.</p>
-      <div class="cta">
-        <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo/releases/latest">.deb</a>
-        <a class="btn" id="dl-rpm" href="https://github.com/kotilo-dev/kotilo/releases/latest">.rpm</a>
-        <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo/releases/latest">AppImage</a>
+      <div class="dl-group">
+        <p><b>Linux (x64):</b> .deb for Debian and Ubuntu, .rpm for Fedora and openSUSE, or an AppImage for any distribution with WebKitGTK 4.1. Dictation, the mascot and global hotkeys are not on Linux yet.</p>
+        <div class="cta">
+          <a class="btn" id="dl-deb" href="https://github.com/kotilo-dev/kotilo/releases/latest">.deb</a>
+          <a class="btn" id="dl-rpm" href="https://github.com/kotilo-dev/kotilo/releases/latest">.rpm</a>
+          <a class="btn" id="dl-appimage" href="https://github.com/kotilo-dev/kotilo/releases/latest">AppImage</a>
+        </div>
       </div>
-      <p class="section-lead"><b>macOS (preview):</b> macOS 14 Sonoma or later. Open the .dmg and drag Kotilo to Applications. Apple Silicon is M1 and later; About This Mac shows your chip. Dictation, the mascot, global hotkeys and the Dock badge are not on macOS yet.</p>
-      <div class="cta">
-        <a class="btn" id="dl-mac-arm" href="https://github.com/kotilo-dev/kotilo/releases/latest">Apple Silicon</a>
-        <a class="btn" id="dl-mac-intel" href="https://github.com/kotilo-dev/kotilo/releases/latest">Intel</a>
+      <div class="dl-group">
+        <p><b>macOS (preview):</b> macOS 14 Sonoma or later. Open the .dmg and drag Kotilo to Applications. Apple Silicon is M1 and later; About This Mac shows your chip. Dictation, the mascot, global hotkeys and the Dock badge are not on macOS yet.</p>
+        <div class="cta">
+          <a class="btn" id="dl-mac-arm" href="https://github.com/kotilo-dev/kotilo/releases/latest">Apple Silicon</a>
+          <a class="btn" id="dl-mac-intel" href="https://github.com/kotilo-dev/kotilo/releases/latest">Intel</a>
+        </div>
       </div>
       <div class="meta"><span id="dl-version">Latest release</span> · <a href="https://github.com/kotilo-dev/kotilo/releases">all releases and release notes</a></div>
       <div class="callout">
@@ -194,10 +230,10 @@
       <a href="https://github.com/kotilo-dev/kotilo/blob/main/LICENSE">License (Apache-2.0)</a>
       <a href="https://github.com/kotilo-dev/kotilo/issues">Issues</a>
       <a href="https://github.com/kotilo-dev/kotilo/discussions">Discussions</a>
+      <a href="/">More tools from Kotilo</a>
     </div>
-    <p>Kotilo is Finnish for a snail shell ("koti" means home): a portable shell you carry your agents around in. <a href="/">More tools from Kotilo</a>.</p>
     <p>Kotilo works with Claude Code, Codex, GitHub Copilot CLI, Gemini CLI, Qwen Code, Factory Droid, OpenCode and Cursor CLI. It is an independent open-source project, not affiliated with, sponsored by or endorsed by Anthropic, OpenAI, GitHub/Microsoft, Google, Alibaba, Factory, SST/OpenCode or Anysphere. Their product names are trademarks of their respective owners and are used only to describe compatibility.</p>
-    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Geist (SIL Open Font License).</p>
+    <p>This website sets no cookies and has no analytics; the download buttons ask the GitHub API for the latest release. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
   </div>
 </footer>
 
