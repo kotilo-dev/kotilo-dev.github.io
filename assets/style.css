@@ -547,3 +547,26 @@ pre.cmd { display: block; max-width: 100%; overflow-x: auto; width: fit-content;
   .ticker ul, .typer .caret, .mc .snail .halo { animation: none !important; }
   .mc *, .chip { transition: none !important; }
 }
+
+/* Other apps: text left, screenshots right */
+.page-intro { padding-top: 56px; padding-bottom: 56px; }
+.page-intro h1 { font-size: 40px; line-height: 1.15; margin: 0 0 16px; max-width: 720px; }
+.page-intro .lead { color: var(--text-2); font-size: 17px; margin: 0; max-width: 640px; }
+.app { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
+.app-text { min-width: 0; }
+.app-name { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.2; margin-bottom: 12px; }
+.app-name img { width: 40px; height: 40px; }
+.app-lead { color: var(--text-2); font-size: 17px; margin: 0 0 16px; }
+.app-points { margin: 0; padding-left: 18px; color: var(--text-2); font-size: 15px; }
+.app-points li { margin: 6px 0; }
+.app-points li::marker { color: var(--accent); }
+.app-install { margin-top: 20px; line-height: 1.6; font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.app-shots { display: grid; gap: 20px; min-width: 0; }
+@media (max-width: 960px) {
+  .app { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 720px) {
+  .page-intro { padding-top: 40px; padding-bottom: 40px; }
+  .page-intro h1 { font-size: 30px; }
+  .app-name { font-size: 22px; }
+}
