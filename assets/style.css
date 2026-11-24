@@ -583,3 +583,4 @@ pre.cmd { display: block; max-width: 100%; overflow-x: auto; width: fit-content;
 .soon .app-lead { margin: 0; }
 .soon-tag { display: inline-block; margin-bottom: 12px; padding: 2px 10px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 13px; }
 @media (max-width: 720px) { .soon { padding: 20px; } }
+.video-wide { max-width: 880px; margin: 32px auto 0; display: grid; gap: 20px; }

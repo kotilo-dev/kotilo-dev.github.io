@@ -61,7 +61,7 @@ Alt+Shift+V  clipboard history</pre>
       </div>
       <div class="app-shots">
         <div class="shot video">
-          <a class="video-play" href="https://www.youtube.com/watch?v=bh9fVXhsGSw" data-yt="bh9fVXhsGSw" aria-label="Play the video: Kotilo, a dynamic island and top bar for GlazeWM">
+          <a class="video-play" href="https://www.youtube.com/watch?v=bh9fVXhsGSw" data-yt="bh9fVXhsGSw" data-title="Kotilo: a dynamic island and top bar for GlazeWM" aria-label="Play the video: Kotilo, a dynamic island and top bar for GlazeWM">
             <img src="/assets/img/shells/zebar-video.webp" width="1280" height="720" alt="Video: Kotilo, a dynamic island and top bar for GlazeWM">
             <span class="play" aria-hidden="true"></span>
           </a>
@@ -96,20 +96,6 @@ Alt+Shift+V  clipboard history</pre>
     <p>This website sets no cookies and has no analytics. Fonts: Fraunces and JetBrains Mono (SIL Open Font License).</p>
   </div>
 </footer>
-<script>
-  // Swap the thumbnail for the player only on click, so YouTube is not contacted before that.
-  document.querySelectorAll(".video-play").forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + a.dataset.yt + "?autoplay=1&rel=0";
-      f.title = a.getAttribute("aria-label").replace("Play the video: ", "");
-      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-      f.allowFullscreen = true;
-      f.referrerPolicy = "strict-origin-when-cross-origin";
-      a.replaceWith(f);
-    });
-  });
-</script>
+<script src="/assets/video.js" defer></script>
 </body>
 </html>
